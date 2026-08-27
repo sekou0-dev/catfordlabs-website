@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-labelledby="markTitle">
+  <title id="markTitle">Catford Labs mark</title>
+  <rect width="64" height="64" rx="16" fill="#161411"/>
+  <circle cx="24" cy="26" r="10" fill="#FF4D2E"/>
+  <circle cx="40" cy="26" r="10" fill="#D6FF4B"/>
+  <circle cx="32" cy="40" r="10" fill="#F3EDE4"/>
+</svg>
