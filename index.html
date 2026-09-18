@@ -8,7 +8,7 @@
       name="description"
       content="Catford Labs creates games and apps for the world’s markets."
     />
-    <meta name="theme-color" content="#F3EDE4" />
+    <meta name="theme-color" content="#0D7A85" />
     <meta property="og:title" content="Catford Labs" />
     <meta
       property="og:description"
@@ -16,10 +16,11 @@
     />
     <meta property="og:type" content="website" />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/catford-labs-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Outfit:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Nunito:wght@500;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
@@ -28,15 +29,14 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header" data-header>
-      <a class="brand" href="./">
+      <a class="brand" href="./index.html" aria-label="Catford Labs home">
         <img
-          class="brand-mark"
-          src="./assets/mark.svg"
-          alt=""
-          width="40"
-          height="40"
+          class="brand-logo"
+          src="./assets/catford-labs-logo.png"
+          alt="Catford Labs"
+          width="220"
+          height="167"
         />
-        <span class="brand-name">Catford Labs</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
         <a href="#work">What we make</a>
@@ -46,39 +46,46 @@
 
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">A studio for play</p>
-          <h1 id="hero-title">
-            <span class="hero-title-line">Catford</span>
-            <span class="hero-title-line italic">Labs</span>
-          </h1>
-          <p class="hero-lede">
-            We create games and apps for the world’s markets.
-          </p>
-          <a class="button" href="#work">See what we make</a>
+        <div class="hero-brand" data-playfield>
+          <img
+            class="hero-logo"
+            src="./assets/catford-labs-logo.png"
+            alt=""
+            width="1024"
+            height="776"
+          />
+          <div class="playfield" aria-hidden="true">
+            <span class="token token-zest" data-depth="0.08"></span>
+            <span class="token token-coral" data-depth="0.05"></span>
+            <span class="token token-teal" data-depth="0.1"></span>
+            <span class="token token-diamond" data-depth="0.06"></span>
+          </div>
         </div>
 
-        <div class="playfield" aria-hidden="true" data-playfield>
-          <span class="token token-a" data-depth="0.04"></span>
-          <span class="token token-b" data-depth="0.08"></span>
-          <span class="token token-c" data-depth="0.06"></span>
-          <span class="token token-d" data-depth="0.1"></span>
-          <span class="token token-e" data-depth="0.05"></span>
+        <div class="hero-copy">
+          <p class="eyebrow">A studio for play</p>
+          <h1 id="hero-title">Games and apps for the world’s markets.</h1>
+          <p class="hero-lede">
+            Curious products with a sunny streak — built to travel, and to be
+            opened again.
+          </p>
+          <a class="button" href="#work">See what we make</a>
         </div>
       </section>
 
       <section class="work" id="work" aria-labelledby="work-title">
         <div class="section-head">
           <p class="eyebrow">What we make</p>
-          <h2 id="work-title">Playful products, built with care.</h2>
+          <h2 id="work-title">Made to be opened again.</h2>
         </div>
         <div class="work-grid">
           <article class="work-card">
             <p class="card-kicker">Games</p>
             <h3>Worlds worth returning to.</h3>
             <p>
-              Original games designed to feel good in the hand — and to travel
-              well, from first tap to far-away launch.
+              Original games with a grin — including Play7 — designed to feel
+              good in the hand and travel well from first tap to far-away
+              launch.
             </p>
           </article>
           <article class="work-card">
@@ -117,22 +124,18 @@
     </main>
 
     <footer class="site-footer">
-      <div class="footer-brand">
+      <a class="footer-brand" href="./index.html" aria-label="Catford Labs home">
         <img
-          class="brand-mark"
-          src="./assets/mark.svg"
-          alt=""
-          width="36"
-          height="36"
+          class="footer-logo"
+          src="./assets/catford-labs-logo.png"
+          alt="Catford Labs"
+          width="180"
+          height="136"
         />
-        <div>
-          <p class="footer-name">Catford Labs</p>
-          <p class="footer-tag">Games and apps for the world’s markets.</p>
-        </div>
-      </div>
+      </a>
       <p class="footer-meta">
         <span>&copy; <span data-year>2026</span> Catford Labs</span>
-        <span>More from the studio soon.</span>
+        <span>Games and apps for the world’s markets.</span>
       </p>
     </footer>
 
