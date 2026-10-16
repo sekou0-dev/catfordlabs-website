@@ -120,6 +120,7 @@ a {
 
 .hero,
 .work,
+.product,
 .world {
   scroll-margin-top: calc(var(--header) + 0.5rem);
 }
@@ -327,6 +328,96 @@ h1 {
   max-width: 34ch;
 }
 
+.work-card a {
+  color: var(--teal);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.work-card a:hover {
+  color: var(--coral);
+}
+
+.product {
+  display: grid;
+  grid-template-columns: minmax(12rem, 18rem) 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin: 0 6vw 6rem;
+  padding: 2.4rem;
+  scroll-margin-top: calc(var(--header) + 1.25rem);
+  background: color-mix(in srgb, white 70%, var(--cream));
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: 10px 10px 0 var(--teal-bright);
+}
+
+.product-icon {
+  width: 100%;
+  max-width: 18rem;
+  border-radius: 2.2rem;
+  box-shadow: 0 16px 28px rgba(5, 71, 87, 0.18);
+}
+
+.product-lede {
+  max-width: 34ch;
+  margin: 1rem 0 1.25rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+.product h2 {
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+}
+
+.product-points {
+  margin: 0 0 1.6rem;
+  padding: 0;
+  list-style: none;
+  max-width: 38ch;
+}
+
+.product-points li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.45rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.product-points li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  color: var(--coral);
+  font-size: 0.7em;
+}
+
+.product-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.1rem 1.4rem;
+}
+
+.store-badge img {
+  height: 3.35rem;
+  width: auto;
+}
+
+.text-link {
+  font-weight: 800;
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.text-link:hover {
+  color: var(--coral);
+}
+
 .world {
   background:
     radial-gradient(700px 280px at 90% 0%, rgba(255, 219, 71, 0.28), transparent 55%),
@@ -484,9 +575,19 @@ h1 {
   }
 
   .work-grid,
+  .product,
   .site-footer {
     grid-template-columns: 1fr;
     display: grid;
+  }
+
+  .product {
+    margin-left: 6vw;
+    margin-right: 6vw;
+  }
+
+  .product-icon {
+    max-width: 12rem;
   }
 
   .site-footer,
@@ -500,10 +601,16 @@ h1 {
   .site-header,
   .hero,
   .work,
+  .product,
   .section-head.on-dark,
   .site-footer {
     padding-left: 1.15rem;
     padding-right: 1.15rem;
+  }
+
+  .product {
+    margin-left: 1.15rem;
+    margin-right: 1.15rem;
   }
 
   .brand-logo {
