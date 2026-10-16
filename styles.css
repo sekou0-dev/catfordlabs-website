@@ -352,11 +352,19 @@ h1 {
   box-shadow: 10px 10px 0 var(--teal-bright);
 }
 
+.product-visual {
+  width: min(100%, 18rem);
+  aspect-ratio: 1;
+  border-radius: 22.5%;
+  overflow: hidden;
+  box-shadow: 0 16px 28px rgba(5, 71, 87, 0.18);
+}
+
 .product-icon {
   width: 100%;
-  max-width: 18rem;
-  border-radius: 2.2rem;
-  box-shadow: 0 16px 28px rgba(5, 71, 87, 0.18);
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .product-lede {
