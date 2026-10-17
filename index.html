@@ -9,12 +9,32 @@
       content="Catford Labs creates games and apps for the world’s markets."
     />
     <meta name="theme-color" content="#0D7A85" />
+    <link rel="canonical" href="https://www.catfordlabs.com/" />
     <meta property="og:title" content="Catford Labs" />
     <meta
       property="og:description"
       content="Games and apps for the world’s markets."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.catfordlabs.com/" />
+    <meta
+      property="og:image"
+      content="https://www.catfordlabs.com/assets/catford-labs-logo.png"
+    />
+    <script>
+      (function () {
+        var host = location.hostname;
+        if (host !== "catfordlabs.com" && host !== "www.catfordlabs.com") return;
+        if (location.protocol === "https:" && host === "www.catfordlabs.com")
+          return;
+        location.replace(
+          "https://www.catfordlabs.com" +
+            location.pathname +
+            location.search +
+            location.hash
+        );
+      })();
+    </script>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./assets/catford-labs-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

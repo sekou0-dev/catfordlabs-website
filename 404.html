@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Page not found — Catford Labs</title>
     <meta name="theme-color" content="#0D7A85" />
+    <script>
+      (function () {
+        var host = location.hostname;
+        if (host !== "catfordlabs.com" && host !== "www.catfordlabs.com") return;
+        if (location.protocol === "https:" && host === "www.catfordlabs.com")
+          return;
+        location.replace(
+          "https://www.catfordlabs.com" +
+            location.pathname +
+            location.search +
+            location.hash
+        );
+      })();
+    </script>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
