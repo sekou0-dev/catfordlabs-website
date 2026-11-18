@@ -56,10 +56,33 @@
   /* Locktone sky parallax */
   const skyBg = document.querySelector(".feature-locktone .feature-bg");
 
+  /* Highlight the nav item for the section in view */
+  const navLinks = [...document.querySelectorAll("[data-nav]")];
+  const navSections = navLinks
+    .map((link) => [link, document.getElementById(link.dataset.nav)])
+    .filter(([, section]) => section);
+
+  const updateNav = (vh) => {
+    if (!navSections.length) return;
+    const line = vh * 0.4;
+    let active = null;
+    navSections.forEach(([link, section]) => {
+      const r = section.getBoundingClientRect();
+      if (r.top <= line && r.bottom > line) active = link;
+    });
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+    if (atBottom) active = navSections[navSections.length - 1][0];
+    navLinks.forEach((link) => {
+      if (link === active) link.setAttribute("aria-current", "true");
+      else link.removeAttribute("aria-current");
+    });
+  };
+
   let ticking = false;
   const onScrollEffects = () => {
     ticking = false;
     const vh = window.innerHeight;
+    updateNav(vh);
     if (words.length) {
       const r = statement.getBoundingClientRect();
       const progress = Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (r.height + vh * 0.35)));
