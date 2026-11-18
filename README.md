@@ -2,7 +2,7 @@
 
 Public homepage for Catford Labs — games and apps for the world’s markets.
 
-The site uses the Catford Labs lockup and a palette drawn from the Play7 logo: teal, coral, lemon zest, cream, and ink.
+The site uses the Catford Labs lockup and a palette of teal, coral, lemon zest, cream, and ink. Fonts (Barlow Condensed and Nunito, SIL Open Font License) are self-hosted in `assets/fonts/`, so pages make no third-party requests.
 
 ## Local preview
 
@@ -25,4 +25,4 @@ Apex `catfordlabs.com` must use these GitHub Pages A records only:
 - `185.199.110.153`
 - `185.199.111.153`
 
-Do not keep `85.199.111.153` — that address is not GitHub, so Let’s Encrypt cannot issue a certificate for the apex. `www` and `sentrycam` should CNAME to `sekou0-dev.github.io`.
+Do not keep `85.199.111.153` — that address is not GitHub, so Let’s Encrypt cannot issue a certificate for the apex. `www`, `sentrycam` and `locktone` should CNAME to `sekou0-dev.github.io`.
