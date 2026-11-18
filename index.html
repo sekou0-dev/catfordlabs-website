@@ -19,8 +19,15 @@
     <meta property="og:url" content="https://www.catfordlabs.com/" />
     <meta
       property="og:image"
-      content="https://www.catfordlabs.com/assets/catford-labs-logo.png"
+      content="https://www.catfordlabs.com/assets/og-image.png"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="The Catford Labs logo: a line-drawn cat above the words Catford Labs."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
     <script>
       (function () {
         var host = location.hostname;
@@ -36,14 +43,22 @@
       })();
     </script>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="./assets/catford-labs-logo.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Nunito:wght@500;700;800&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="/assets/fonts/nunito-variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
-    <link rel="stylesheet" href="./styles.css?v=3" />
+    <link
+      rel="preload"
+      href="/assets/fonts/barlow-condensed-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./styles.css?v=5" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -54,14 +69,14 @@
           class="brand-logo"
           src="./assets/catford-labs-logo.png"
           alt="Catford Labs"
-          width="220"
-          height="167"
+          width="575"
+          height="599"
         />
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="#work">What we make</a>
+        <a href="#locktone">Locktone</a>
         <a href="#sentrycam">SentryCam</a>
-        <a href="#world">The world</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
@@ -72,8 +87,8 @@
             class="hero-logo"
             src="./assets/catford-labs-logo.png"
             alt=""
-            width="1024"
-            height="776"
+            width="575"
+            height="599"
           />
           <div class="playfield" aria-hidden="true">
             <span class="token token-zest" data-depth="0.08"></span>
@@ -104,9 +119,9 @@
             <p class="card-kicker">Games</p>
             <h3>Worlds worth returning to.</h3>
             <p>
-              Original games with a grin — including Play7 — designed to feel
-              good in the hand and travel well from first tap to far-away
-              launch.
+              Original games with a grin — starting with
+              <a href="#locktone">Locktone</a>, an arcade dogfighter for iPhone —
+              designed to feel good in the hand and travel well.
             </p>
           </article>
           <article class="work-card">
@@ -121,11 +136,59 @@
         </div>
       </section>
 
+      <section class="product product-game" id="locktone" aria-labelledby="locktone-title">
+        <div class="product-visual">
+          <img
+            class="product-icon"
+            src="./assets/locktone-icon.webp"
+            alt="Locktone app icon"
+            width="512"
+            height="512"
+          />
+        </div>
+        <div class="product-copy">
+          <p class="eyebrow">New on the App Store</p>
+          <h2 id="locktone-title">Locktone</h2>
+          <p class="product-lede">
+            A landscape arcade dogfighter for iPhone. Find a hostile, lock the
+            tone, fire.
+          </p>
+          <ul class="product-points">
+            <li>Hold the reticle until the tone goes solid, then fire</li>
+            <li>Boost and flare to shake whatever settles on your six</li>
+            <li>A seeded daily run with Game Center leaderboards</li>
+            <li>No ads and no in-app purchases</li>
+          </ul>
+          <div class="product-actions">
+            <a
+              class="store-badge"
+              href="https://apps.apple.com/app/locktone/id6811698852"
+              rel="noopener noreferrer"
+              aria-label="Download Locktone on the App Store"
+            >
+              <img
+                src="./assets/download-on-app-store.svg"
+                alt="Download Locktone on the App Store"
+                width="160"
+                height="54"
+              />
+            </a>
+            <a
+              class="text-link"
+              href="https://locktone.catfordlabs.com"
+              rel="noopener noreferrer"
+            >
+              Learn more
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section class="product" id="sentrycam" aria-labelledby="sentrycam-title">
         <div class="product-visual">
           <img
             class="product-icon"
-            src="./assets/sentrycam-logo.png"
+            src="./assets/sentrycam-logo.webp"
             alt="SentryCam app icon"
             width="512"
             height="512"
@@ -193,22 +256,28 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" id="contact">
       <a class="footer-brand" href="./index.html" aria-label="Catford Labs home">
         <img
           class="footer-logo"
           src="./assets/catford-labs-logo.png"
           alt="Catford Labs"
-          width="180"
-          height="136"
+          width="575"
+          height="599"
         />
       </a>
-      <p class="footer-meta">
-        <span>&copy; <span data-year>2026</span> Catford Labs</span>
-        <span>Games and apps for the world’s markets.</span>
-      </p>
+      <div class="footer-meta">
+        <p class="footer-contact">
+          Questions or support:
+          <a href="mailto:support@catfordlabs.com">support@catfordlabs.com</a>
+        </p>
+        <p class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+        </p>
+        <p>&copy; <span data-year>2026</span> Catford Labs</p>
+      </div>
     </footer>
 
-    <script src="./script.js?v=3" defer></script>
+    <script src="./script.js?v=5" defer></script>
   </body>
 </html>
